@@ -42,14 +42,8 @@ class Program
             }           
           
 
-           }
-           
-            
-
-            
-        
-            
-          
+          }
+                     
           average=sum/(numbers.Count-1);
           Console.WriteLine($"The sum is {sum}, the average is {average}, the max is {max},");
           if (min < 0)
@@ -60,9 +54,14 @@ class Program
           {
             Console.Write($"the smallest number is {min}");
           }
-          numbers.Sort();
-          for (int i=0, i < numbers.Count; i++)
-          Console.WriteLine(numbers);
+       numbers.Sort();             
+       for (int i =0; i<numbers.Count;i++)
+       {
+         Console.WriteLine(numbers[i]);
+       }
+
+              
+          
          
     }
 }
