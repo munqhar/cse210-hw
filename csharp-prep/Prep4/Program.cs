@@ -42,12 +42,17 @@ class Program
             }           
           
 
+<<<<<<< HEAD
          }
          
             
         
             
           
+=======
+          }
+                     
+>>>>>>> 2d7f86e3e6d66776d94b85632e943b863d5aa3a2
           average=sum/(numbers.Count-1);
           Console.WriteLine($"The sum is {sum}, the average is {average}, the max is {max},");
           if (min < 0)
@@ -58,6 +63,7 @@ class Program
           {
             Console.Write($"the smallest number is {min}");
           }
+<<<<<<< HEAD
             numbers.Sort();
             for (int j=0; j < numbers.Count; j++)
           {
@@ -65,6 +71,15 @@ class Program
           }
 
           
+=======
+       numbers.Sort();             
+       for (int i =0; i<numbers.Count;i++)
+       {
+         Console.WriteLine(numbers[i]);
+       }
+
+              
+>>>>>>> 2d7f86e3e6d66776d94b85632e943b863d5aa3a2
           
          
     }
