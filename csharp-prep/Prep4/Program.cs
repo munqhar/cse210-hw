@@ -42,10 +42,8 @@ class Program
             }           
           
 
-           }
-           
-            
-
+         }
+         
             
         
             
@@ -60,9 +58,14 @@ class Program
           {
             Console.Write($"the smallest number is {min}");
           }
-          numbers.Sort();
-          for (int i=0, i < numbers.Count; i++)
-          Console.WriteLine(numbers);
+            numbers.Sort();
+            for (int j=0; j < numbers.Count; j++)
+          {
+            Console.WriteLine(numbers[j]);
+          }
+
+          
+          
          
     }
 }
