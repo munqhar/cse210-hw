@@ -1,8 +1,10 @@
 using System;
+using System.Runtime.InteropServices;
 
 class Program
 {
     static void Main(string[] args)
+    {
     { string answer = "yes";
         while (answer == "yes")
         {
@@ -40,6 +42,8 @@ class Program
         Console.WriteLine($"the number of tries were {count}");
         Console.WriteLine("Do you want to continue playing yes or not ?");
         answer = Console.ReadLine();
-        }
+        } 
+    
     }
+  }
 }
