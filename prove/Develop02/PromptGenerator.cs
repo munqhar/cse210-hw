@@ -38,7 +38,7 @@ public class PromptGenerator
         Prompts.Add("Three goals I have set for myself are...");
         Prompts.Add("List the top 5 people you admire, and why.");
         Prompts.Add("Who is your favorite person in the world and why?");
-        Prompts.Add("What is your favorite song/musical piece and why? */");
+        Prompts.Add("What is your favorite song/musical piece and why?");
         Random randomGenerator = new Random();
         int number = randomGenerator.Next(0, 30);
         return Prompts[number];
