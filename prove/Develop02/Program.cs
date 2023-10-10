@@ -39,7 +39,8 @@ class Program
              _fileName = Console.ReadLine();
              string[] lines = System.IO.File.ReadAllLines(_fileName);
              foreach (string line in lines)
-             {Entry SecondEntry = new Entry();  // the second entry is encharged to load the information in a file 
+             {
+               Entry SecondEntry = new Entry();  // the second entry is encharged to load the information in a file 
               string[] parts = line.Split(";");
                 SecondEntry.Prompt = parts[0];             
                 SecondEntry._response = parts[1];             
