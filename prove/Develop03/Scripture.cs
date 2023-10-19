@@ -6,7 +6,8 @@ public class Scripture
     private List<Word> _words = new List<Word>();
     private string _scripture;
     private Reference _reference;
-    public int i ;
+    public int j=0 ;
+    public int k=0;
     public Scripture ()
     {
       _scripture = "God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
@@ -20,17 +21,34 @@ public class Scripture
       
     }
     public void Hidewords()
-    {
-      Random randomGenerator = new Random();
-      
+    {Random randomGenerator = new Random();
+      int number = randomGenerator.Next(0, _words.Count);
       for ( int i=0; i<=2;i++)
-      {
-        int number = randomGenerator.Next(0, _words.Count);
-        //if (_words[number]._visibility == false)
-           _words[number].Hide();
-        
+      {   
+            
+       if (_words[number]._visibility == 1)
+        {
+          while (j == 0 && k<=_words.Count)
+          {
+              number = randomGenerator.Next(0, _words.Count);
+              if (_words[number]._visibility == 0)
+               {
+                 _words[number].Hide();
+                 j=1;
+                 k++;
+               }
+              
+            
+          }    
+         
+        }
+        else 
+        {  
+         _words[number].Hide();
           
       
+        }
+        number = randomGenerator.Next(0, _words.Count);
       }
 
 

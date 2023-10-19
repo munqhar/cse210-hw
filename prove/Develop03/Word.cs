@@ -2,13 +2,13 @@ using System.Dynamic;
 
 public class Word {
     private string _word;
-    public bool _visibility;
+    public int _visibility = 0;
 
     public void Hide()
     {
         int _wordLength = _word.Length;
         string line="_";
-        _word = string.Concat(Enumerable.Repeat(line, _wordLength));
+        _word = string.Concat(Enumerable.Repeat(line, _wordLength));//repeat the lines in the same amount of letters of the word
         //int i = 0;
 
         /* while (i<=_wordLength)
@@ -16,12 +16,12 @@ public class Word {
             _word = line;
             i++;
         }    */     
-       _visibility = false;
+       _visibility = 1;
     }
     public void Show()
     {
         Console.Write(_word);
-        _visibility=true;
+        
 
     }
     public Word(string word)

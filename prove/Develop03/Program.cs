@@ -6,8 +6,10 @@ class Program
     static void Main(string[] args)
     {
       Scripture scripture = new Scripture();
-      scripture.Hidewords();
-      scripture.Hidewords();
+     for (int i = 0; i<=25;i++)
+      {scripture.Hidewords();}
+     
+      
       scripture.GetTheRenderText();
 
 
