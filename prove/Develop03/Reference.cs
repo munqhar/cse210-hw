@@ -15,6 +15,12 @@ public class Reference
         _chapter = chapter;
         _verse = verse;
     }
+    public string get()
+    { 
+        string A= ($"{_book} {_chapter}: {_verse} ");
+        return A;
+
+    }
 
 
 }

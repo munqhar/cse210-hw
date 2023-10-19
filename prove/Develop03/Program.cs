@@ -4,21 +4,22 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-      Scripture scripture = new Scripture();
-      scripture.Print();
-      string _response = "";
-      bool r=false;
+    { 
+      Reference reference = new Reference();//This is the reference class     
+      Console.Write($"{reference.get()} ");//We get the entire reference
+      Scripture scripture = new Scripture();//this is the scripture class
+      scripture.Print();// we print the scripture              
+      string _response = "";//string response with Enter      
       
-      while (_response != "quit" &&  r == false  ) //|| the other condition 
+      while (_response != "quit" &&  scripture.IsCompletelyHidden() == false  ) // if the user types quit or is completely hidden the program stops
       {
-        r=scripture.IsCompletelyHidden();
+        
         Console.WriteLine("\nPress enter to continue or type 'quit' to finish:");
-        _response = Console.ReadLine();
+        _response = Console.ReadLine(); 
         Console.Clear();
-        scripture.Hidewords();
-        Console.WriteLine(" ");
-        scripture.GetTheRenderText();      
+        Console.Write($"{reference.get()} ");//the reference one more time
+        scripture.Hidewords();//this is encharged to hide three words        
+        scripture.GetTheRenderText(); // get the render text     
         
 
       }  
