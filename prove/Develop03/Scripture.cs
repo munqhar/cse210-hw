@@ -13,7 +13,7 @@ public class Scripture
       foreach (string i in x)
        {Word _word = new Word(i);
         _words.Add(_word);
-        //Console.Write($"{i} "); we use this to see how our program is doing.
+        Console.Write($"{i} "); //we use this to see how our program is doing.
        }
       
       
@@ -35,14 +35,12 @@ public class Scripture
     }
     public void GetTheRenderText()
     {
-       for ( int i=0; i<_words.Count;i++)
+       foreach (Word word in _words )
       {
-        if (i<= 2)
-         {
-          _words[i].Hide();
-          }
-          else
-          _words[i].Show();
+        word.Show();
+        Console.Write(" ");
+        
+        
           
       
       }

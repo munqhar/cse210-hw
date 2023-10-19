@@ -8,12 +8,14 @@ public class Word {
     {
         int _wordLength = _word.Length;
         string line="_";
-        int i = 0;
-        while (i<=_wordLength)
+        _word = string.Concat(Enumerable.Repeat(line, _wordLength));
+        //int i = 0;
+
+        /* while (i<=_wordLength)
         {
-            Console.Write(line);
+            _word = line;
             i++;
-        }        
+        }    */     
        _visibility = false;
     }
     public void Show()
