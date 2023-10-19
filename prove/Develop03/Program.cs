@@ -7,6 +7,7 @@ class Program
     {
       Scripture scripture = new Scripture();
       scripture.Hidewords();
+      scripture.Hidewords();
       scripture.GetTheRenderText();
 
 
