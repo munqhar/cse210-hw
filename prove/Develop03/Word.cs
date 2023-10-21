@@ -2,7 +2,8 @@ using System.Dynamic;
 
 public class Word {
     private string _word;
-    public int _visibility = 0;
+    private int _visibility = 0; //i need to shange this, we are not supposed to use public attributtes,
+                                // i must make a method that says is hidden or not
 
     public void Hide()
     {
@@ -15,6 +16,19 @@ public class Word {
     {
         Console.Write(_word);
         
+
+    }
+    public string IsHidden() 
+    {
+        if (_visibility == 1)
+        {
+            return "Yes";
+
+        }
+        else
+         {
+            return "No";
+         }
 
     }
     public Word(string word)

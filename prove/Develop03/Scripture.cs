@@ -26,12 +26,12 @@ public class Scripture
       int number = randomGenerator.Next(0, _words.Count);//_words count is the length of the list, how many elements has
       for ( int i=0; i<=2;i++) // we hide three words
       {               
-       if (_words[number]._visibility == 1)//if the visibility is 1 then it's hidden and if it's 0 is shown
+       if (_words[number].IsHidden() == "Yes")//if the visibility is 1 then it's hidden and if it's 0 is shown
         {
           while (j == 0 && k<_words.Count)//if it's hidden, so we look other which is shown in order to hide it, 
           {                               //if we find one we change the value of j, we look in the entire list.
               number = randomGenerator.Next(0, _words.Count);
-              if (_words[number]._visibility == 0)
+              if (_words[number].IsHidden() == "No")
                {
                  _words[number].Hide();
                  j=1;
