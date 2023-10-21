@@ -4,10 +4,10 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    { 
-      Reference reference = new Reference();//This is the reference class     
+    {string _proverbs ="Trust in the Lord with all thine heart; and  lean not unto thine own understanding.  In all thy ways acknowledge him,  and he shall direct thy paths.";
+      Reference reference = new Reference("Proverbs","3","5","6");//This is the reference class     
       Console.Write($"{reference.get()} ");//We get the entire reference
-      Scripture scripture = new Scripture();//this is the scripture class
+      Scripture scripture = new Scripture(_proverbs);//this is the scripture class
       scripture.Print();// we print the scripture              
       string _response = "";//string response with Enter      
       

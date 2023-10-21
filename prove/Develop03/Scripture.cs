@@ -21,6 +21,17 @@ public class Scripture
       
       
     }
+    public Scripture (string scripture)
+    {
+      _scripture = scripture;
+      string[] x = _scripture.Split(" ");//we split every word in a string vector
+      foreach (string i in x)
+       {Word _word = new Word(i);// we asing every word the class Word
+        _words.Add(_word);//we add every class Word to a list of Word type
+        //Console.Write($"{i} "); //we use this to see how our program is doing.
+       }
+
+    }
     public void Hidewords()
     {Random randomGenerator = new Random();
       int number = randomGenerator.Next(0, _words.Count);//_words count is the length of the list, how many elements has
