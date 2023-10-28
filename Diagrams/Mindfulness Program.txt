@@ -1,0 +1,47 @@
+@startuml
+class "Activity" as class1
+{
+#_theActivityName: string
+#_theDescription: string
+#_theDurationInSeconds: int
++DisplayTheStartingMessage(): void
++DisplayTheEndingMessage(): void
++PauseShowASpinner(): void
++PauseShowACountdown(): void
++Activity(Name: string, Description: string, Duration:int):void
+
+}
+class "Reflecting Activity" as class2
+{
+#_prompts: List <string>
+#_questions: List<string>
+#_randomnuber: int
++GetPrompt():string
++GetQuestion():string
++DisplayPrompt():void
++DisplayQuestion():void
++RunReflectingActivity():void
++ReflectingActivity(Name: string, Description: string, Duration:int):void
+
+}
+class "Breathing Activity" as class3
+{
++RunBreathingActivity():void
++BreathingActivity(Name: string, Description: string, Duration:int):void
+
+}
+class "Listing Activity" as class4
+{
+#_items:List<string>
+#_randomnumber:int
++GetPrompt():string
++DisplayPrompt():void
++RunlistingActivity():string
++ListingActivity(Name: string, Description: string, Duration:int):void
+
+}
+skinparam groupInheritance 2
+class1 <|-- class2
+class1 <|-- class3
+class1 <|-- class4
+@enduml

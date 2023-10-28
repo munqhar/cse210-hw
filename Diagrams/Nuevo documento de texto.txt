@@ -1,0 +1,3 @@
+
+Scripture() [Constructor]:
+ passing the text of the scripture as a single string with all of the words in it. Then, the constructor would have the responsibility of creating the list, and splitting up the words in the string to create Word objects for each one and put them in the list.

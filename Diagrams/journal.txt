@@ -1,0 +1,40 @@
+@startuml
+class "Prompt Generator" as class1
+{
+
+    + string CreatesPrompt()
+}
+class "Entry" as class2
+{
++ string _response;
++ string _datetext;
++ string Prompt;
++ string  eachentries;
++ string place;
++ string showpromptAndSaveEntry()
++ void Display ()
++ string Eachentries()
+}
+class "Journal" as class3
+{
++ List<Entry> _entries
++void Display()
+}
+class "Program" as class4
+{
++string _numberMenu
++string _fileName
++Entry FirstEntry
++PromptGenerator PromptGenerator
++Journal journal
+
+
+}
+class1 -down-> class4
+class2-down->class4
+class3-down->class4
+class1 -> class2
+class2 -> class3
+
+
+@enduml

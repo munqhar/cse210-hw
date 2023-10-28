@@ -1,0 +1,39 @@
+@startuml
+class "Scripture" as class1
+{
+-_words: List<Word>
+-_scripture: string
+-_reference: Reference 
+Scripture(): void
+Hidewords(): void
+GetRenderedText(): void
+
+}
+class "Reference" as class2
+{
+-_book: string
+-_chapter: string
+-_startVerse: string
+-_endVerse: string
+Reference(): void
+Reference(book: string, chapter:string ,verses:string): void
+}
+class "Word " as class3
+{
+-string _word 
+Hide(): void
+Show(): void
+Word(word: string): void
+
+}
+class "program" as class4
+{
+_response: string
+_scripture: Scripture
+_word: Word
+_reference: Reference
+
+}
+
+
+@enduml
