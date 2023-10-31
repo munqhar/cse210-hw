@@ -19,13 +19,21 @@ public class Activity
         Console.WriteLine("You have completed another <<duration>> seconds of the breathing activity");
     }
     public void PauseShowASpinner()
-    {   string [] spinners={"|", "/", "-", "\\"};
-        for(int i =0;i<=3;i++)
+    {  
+         string [] spinners={"|", "/", "-", "\\"};
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(10);
+        int i = 0;
+        while(DateTime.Now < endTime)
         {
             Console.Write(spinners[i]);  
             Thread.Sleep(250);        
-            Console.Write("\b \b"); // Erase the + character 
-                      
+            Console.Write("\b \b"); // Erase the + character             
+            if (i == spinners.Count()-1)
+            {
+                i = 0;
+            }
+            i++;                      
         }           
     }
     public void PauseShowACountdown()

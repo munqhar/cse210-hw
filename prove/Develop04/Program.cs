@@ -8,7 +8,7 @@ class Program
         //Breath.DisplayTheStartingMessage();
         Breath.DisplayTheEndingMessage();
         Console.WriteLine("");
-        Breath.PauseShowACountdown(); 
+        Breath.PauseShowASpinner(); 
 
      }
 }
