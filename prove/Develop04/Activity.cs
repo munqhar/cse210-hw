@@ -4,6 +4,7 @@ public class Activity
 {   protected string _theActivityName;
     protected string _theDescription;
     protected int _theDurationInSeconds;
+    protected DateTime startTime = DateTime.Now;
 
     public void DisplayTheStartingMessage()
     {
@@ -18,11 +19,10 @@ public class Activity
         Console.WriteLine("Well done!!\n");
         Console.WriteLine("You have completed another <<duration>> seconds of the breathing activity");
     }
-    public void PauseShowASpinner()
+    public void PauseShowASpinner(int spinnerDuration)
     {  
-         string [] spinners={"|", "/", "-", "\\"};
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(10);
+         string [] spinners={"|", "/", "-", "\\"};        
+        DateTime endTime = startTime.AddSeconds(spinnerDuration);
         int i = 0;
         while(DateTime.Now < endTime)
         {
@@ -36,16 +36,24 @@ public class Activity
             i++;                      
         }           
     }
-    public void PauseShowACountdown()
+    public void PauseShowACountdown(int countDownDuration)
     {
-        for(int i =0;i<=9;i++)
+        int i ;
+        for( i = countDownDuration;i>=0;i--)
         {
            Console.Write(i);           
            Thread.Sleep(1000);           
-           Console.Write("\b \b"); // Erase the + character
+           Console.Write("\b\b"); // Erase the + character
            //Console.Write(i+1); // Replace it with the - character          
            
         }
+
+    }
+     Activity (string name,string description, int duration)
+    {
+        _theActivityName = name;
+        _theDescription = description;
+        _theDurationInSeconds = duration;
 
     }
 

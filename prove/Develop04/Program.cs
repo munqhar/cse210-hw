@@ -4,11 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Activity Breath = new Activity();
+        Breathing Breath = new Breathing();
         //Breath.DisplayTheStartingMessage();
         Breath.DisplayTheEndingMessage();
         Console.WriteLine("");
-        Breath.PauseShowASpinner(); 
+        Breath.PauseShowACountdown(9); 
 
      }
 }
