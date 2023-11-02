@@ -4,11 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Breathing Breath = new Breathing();
-        //Breath.DisplayTheStartingMessage();
-        Breath.DisplayTheEndingMessage();
-        Console.WriteLine("");
-        Breath.PauseShowACountdown(9); 
+         string _theDescription = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";              
+         Breathing Breath = new Breathing("Breathing",_theDescription);
+         Breath.DisplayTheStartingMessage();        
+         Console.WriteLine("");
+         Breath.RunBreathingActivity();         
+         Breath.DisplayTheEndingMessage();
+
 
      }
 }
