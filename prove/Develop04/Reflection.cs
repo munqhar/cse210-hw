@@ -30,18 +30,33 @@ public class Reflection: Activity
     }
     public void DisplayPrompt()
     {
-        Console.WriteLine(GetPrompt());
+        Console.WriteLine($"--- {GetPrompt()} --- \n");
     }
     public void DisplayQuestion()
     {
-        Console.WriteLine(GetQuestion());
+        Console.WriteLine($"> {GetQuestion()}");
     }
     public void RunReflectingActivity()
     {
+        Console.WriteLine("Consider the following prompt:\n");
+        DisplayPrompt();
+        Console.WriteLine("When you have something in mind, press enter to continue.");
+        Console.ReadLine();
+        Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
+        Console.WriteLine("You may begin in:");
+        PauseShowACountdown(9);
+        DateTime endTime = DateTime.Now.AddSeconds(_theDurationInSeconds);
+        while(DateTime.Now < endTime)
+        { 
+            DisplayQuestion();
+            PauseShowASpinner(10);
+        }
 
     }
     public Reflection(string name, string description) : base(name,description)
     {
+        _theActivityName = name;
+        _theDescription = description;
 
     }
 }

@@ -21,7 +21,7 @@ public class Breathing : Activity
     }
      public Breathing (string name,string description) : base(name, description)
     {
-         _theActivityName = name;
+        _theActivityName = name;
         _theDescription = description;
         
     } 

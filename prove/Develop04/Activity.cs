@@ -12,15 +12,16 @@ public class Activity
         Console.WriteLine($"{_theDescription}\n");
         Console.WriteLine("How long, in seconds, would you like for your session?");
         _theDurationInSeconds =int.Parse(Console.ReadLine());
-         Console.WriteLine("Get ready...");
-         PauseShowASpinner(5);
+        Console.WriteLine("Get ready...");
+        PauseShowASpinner(2);
+        Console.Clear();
     }
     public void DisplayTheEndingMessage()
     {
-        Console.WriteLine("Well done!!");
-        PauseShowASpinner(5);
-        Console.WriteLine($"You have completed another {_theDurationInSeconds} seconds of the breathing activity");
-        PauseShowASpinner(4);
+        Console.WriteLine("\nWell done!!");
+        PauseShowASpinner(3);
+        Console.WriteLine($"You have completed another {_theDurationInSeconds} seconds of the {_theActivityName} activity");
+        PauseShowASpinner(3);
     }
     public void PauseShowASpinner(int spinnerDuration)
     {  
@@ -30,7 +31,7 @@ public class Activity
         while(DateTime.Now < endTime)
         {
             Console.Write(spinners[i]);  
-            Thread.Sleep(250);        
+            Thread.Sleep(500);        
             Console.Write("\b \b"); // Erase the + character             
             if (i == spinners.Count()-1)
             {
