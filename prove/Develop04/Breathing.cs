@@ -1,5 +1,6 @@
 public class Breathing : Activity
 {
+    private const string description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
     public void RunBreathingActivity()
     {
        
@@ -19,7 +20,7 @@ public class Breathing : Activity
 
         }
     }
-     public Breathing (string name,string description) : base(name, description)
+     public Breathing (string name="Breathing") : base(name, description)
     {
         _theActivityName = name;
         _theDescription = description;

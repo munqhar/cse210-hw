@@ -10,7 +10,7 @@ public class Activity
     {
         Console.WriteLine($"Welcome to the {_theActivityName} Activity.\n");
         Console.WriteLine($"{_theDescription}\n");
-        Console.WriteLine("How long, in seconds, would you like for your session?");
+        Console.Write("How long, in seconds, would you like for your session? ");
         _theDurationInSeconds =int.Parse(Console.ReadLine());
         Console.WriteLine("Get ready...");
         PauseShowASpinner(2);
@@ -20,7 +20,7 @@ public class Activity
     {
         Console.WriteLine("\nWell done!!");
         PauseShowASpinner(3);
-        Console.WriteLine($"You have completed another {_theDurationInSeconds} seconds of the {_theActivityName} activity");
+        Console.WriteLine($"You have completed another {_theDurationInSeconds} seconds of the {_theActivityName} Activity.");
         PauseShowASpinner(3);
     }
     public void PauseShowASpinner(int spinnerDuration)
