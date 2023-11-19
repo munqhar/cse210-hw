@@ -4,27 +4,47 @@ public abstract class Goal
     protected bool _isComplete;
     protected string _description;
     protected int _points;
-    protected List<string> _listGoal= new List<string>();
-    public  Goal (string name, string description, int points)
+    protected string _goalType;
+    public  Goal (string name, string description, int points, string goalType )
     {
         _name = name;
         _description = description;
         _points = points;
+        _goalType = goalType;
+        //_listGoal = listGoal;
     }
-    public void CreateFile()
+    
+    public string GetType()
     {
+        return _goalType;
+    }
+    public string CreateFile()
+    {
+        return $"{_goalType}: {_name}, {_description}, {_points} ";
 
     }
-    public void LoadFile()
+    public int GetPoints()
     {
-
+        return _points;
+    }
+   
+    public string getname()
+    {
+        return _name;
     }
     public abstract void RecordEvents ();
-    public void ShowListGoal()
+   
+    /* public void ShowListGoal()
     {
+    for(int i = 0; i < _listGoal.Count; i++)
+        {
+            Console.WriteLine($"{i+1}. [] {_listGoal[i]}");
+        }
 
-    }
+    } */
+    
     public abstract bool IsComplete();
    
-
+  public abstract void ShowListGoal();
+    
 }

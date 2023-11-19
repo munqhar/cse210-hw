@@ -1,17 +1,36 @@
 public class EternalGoal: Goal
 {
-    public EternalGoal(string name, string description, int points): base(name, description, points)
+    
+    public EternalGoal(string name, string description, int points, string goalType ): base( name,  description,  points, goalType )
     {
         _name = name;
         _description = description;
         _points = points;
+        _goalType = goalType;
+//        _listGoal = listGoal;
+        
     }
     public override void RecordEvents()
     {
-        throw new NotImplementedException();
+     Console.WriteLine($"Congratulations! You have earned {_points} points!");               
+     _isComplete = true;
+        
     }
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return _isComplete;
     }
+    public void set(string name, string description, int points, string goalType)
+    {
+        _name = name;
+        _description = description;
+        _points = points;
+        _goalType = goalType;
+
+    }
+      public override void ShowListGoal()
+    {
+        Console.WriteLine($"{_name} ({_description})");
+    }
+   
 }
