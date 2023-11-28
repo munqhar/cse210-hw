@@ -16,4 +16,8 @@ public class Video
     {
         return _comments.Count;
     }
+    public void display()
+    {
+        Console.Write($"Tittle: {_tittle}, Author: {_author}, Length: {_length} seconds, ");
+    }
 }
