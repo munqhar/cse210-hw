@@ -1,7 +1,7 @@
 public class Comment
 {
-    private string _nameOfThePerson;
-    private string _textComment;
+    public string _nameOfThePerson;
+    public string _textComment;
     public Comment(string nameOfThePerson, string textComment)
     {
         _nameOfThePerson = nameOfThePerson;

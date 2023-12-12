@@ -1,0 +1,36 @@
+@startuml
+Class "Activity" as class1
+{
+
+# _date: string
+# _length: int
++TheDistance():float
++TheSpeed():float
++Thepace():float
++GetSummary():void
+
+}
+Class "Running" as class2
+{
+#_distance: int
++TheDistance():float
++GetSummary():void
+}
+Class "Cycling" as class3
+{
+ #_speed: int
++TheSpeed():float
++GetSummary():void
+}
+Class "Swiming" as class4
+{
+#_lapsNumbers: int
++Thepace():float
++GetSummary():void
+}
+
+skinparam groupInheritance 2
+class1 <|-- class2
+class1 <|-- class3
+class1 <|-- class4
+@enduml

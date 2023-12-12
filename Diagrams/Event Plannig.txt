@@ -1,0 +1,49 @@
+@startuml
+Class "Event" as class1
+{
+
+- _eventTittle: List<string>
+- _description: List<string>
+- _date: List<string>
+- _time: List<string>
+-_address: List<adress>
+-_typeOfEvent: string
++Standard details():void
++ShortDescription():void
+
+
+}
+Class "Lectures" as class2
+{
+-_speakerName: string
+-_capacity: int
++ FullDetails():void
++Lectures(_eventTittle: string,_description:string,_date: string, _time:string,_address:address, _speakerName: string,_capacity: int)
+}
+Class "Receptions" as class3
+{
+ -_email: string
++ FullDetails():void
++Receptions(_eventTittle: string,_description:string,_date: string, _time:string,_address:address, _email: string)
+}
+Class "OutdoorGatherings" as class4
+{
+-_weather: string
++ FullDetails():void
++OutdoorGatherings(_eventTittle: string,_description:string,_date: string, _time:string,_address:address,_weather: string)
+
+
+}
+Class "Adress" as class5
+{
+- _streetAdress: string
+- _city: string
+- _state: string
+- _country: string
++ TheAdress(_streetAdress: string,_city: string,_state: string,_country: string ): string
+}
+skinparam groupInheritance 2
+class1 <|-- class2
+class1 <|-- class3
+class1 <|-- class4
+@enduml
