@@ -16,15 +16,22 @@ public class CheckListGoal: Goal
         _tries = tries;
        // _listGoal = ListGoal;
     }
-     public override void RecordEvents()
+     public override int RecordEvents()
     { _tries++;
       if(_tries == _timesToGetBonus)
-      {
-        _isComplete = true;        
+      {               
         Console.WriteLine($"Congratulations! You have earned {_points}+{_bonus} points!");
-        _points = _points + _bonus; 
+        _points = _points + _bonus;
+        _tries = 0; 
+        _isComplete = true; 
+        return _points;
                    
-      }      
+      } 
+      else
+      {
+        return 0;
+      }  
+        
       
         
     }
@@ -45,11 +52,12 @@ public class CheckListGoal: Goal
     }
       public override void ShowListGoal()
     {
-        Console.WriteLine($"{_name} ({_description})--- Currently completed: {_tries}/{_timesToGetBonus}");
-        if (_tries == _timesToGetBonus)
-        {
-          _tries = 0;
-        }
+      if (_tries == _timesToGetBonus)
+      {
+        _tries = 0;
+      }
+      Console.WriteLine($"{_name} ({_description})--- Currently completed: {_tries}/{_timesToGetBonus}");
+        
     }
    
 

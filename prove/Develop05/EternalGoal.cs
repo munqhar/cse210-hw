@@ -10,10 +10,10 @@ public class EternalGoal: Goal
 //        _listGoal = listGoal;
         
     }
-    public override void RecordEvents()
+    public override int RecordEvents()
     {
-     Console.WriteLine($"Congratulations! You have earned {_points} points!");               
-     _isComplete = true;
+     Console.WriteLine($"Congratulations! You have earned {_points} points!");            
+     return _points;
         
     }
     public override bool IsComplete()
