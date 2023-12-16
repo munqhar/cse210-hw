@@ -172,22 +172,20 @@ class Program
                  }
                  Console.Write("Which goal did you accomplish? ");
                  int answer = int.Parse(Console.ReadLine());
-                 if(goals[answer-1].GetType()== "CheckList Goal")
+                 if(goals[answer-1].GetType()== "CheckList Goal" && goals[answer-1].IsComplete()==false)
                  {                    
-                    goals[answer-1].RecordEvents();  
-                    if(goals[answer-1].IsComplete()== true)
-                    {
-                        totalPoints = goals[answer-1].GetPoints()+totalPoints;                 
-                    }
-
-                 }
+                   // goals[answer-1].RecordEvents();  ojo estas llamando dos veces el metodo RecordEvent luego tries cambia dos veces
+                    totalPoints = goals[answer-1].RecordEvents()+totalPoints;
+                 } 
+                   
                  else
                  {
-                    goals[answer-1].RecordEvents();
-                    totalPoints = goals[answer-1].GetPoints()+totalPoints;
+                   Console.WriteLine("This Goal is already done");
                  }
+                    
+                  
 
-                 //goals[answer-1].
+                 
 
              break;
              case "6":
