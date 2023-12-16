@@ -1,5 +1,7 @@
 public abstract class Goal
 {
+    // Making a change to the file
+
     protected string _name;
     protected bool _isComplete;
     protected string _description;
