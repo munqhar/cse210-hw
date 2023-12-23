@@ -23,16 +23,13 @@ public abstract class Goal
         return $"{_goalType}: {_name}, {_description}, {_points} ";
 
     }
-    public int GetPoints()
-    {
-        return _points;
-    }
+   
    
     public string getname()
     {
         return _name;
     }
-    public abstract void RecordEvents ();
+    public abstract int RecordEvents ();
    
     /* public void ShowListGoal()
     {
